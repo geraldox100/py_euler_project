@@ -8,7 +8,7 @@ resposta = 7927
 
 '''
 
-from primos import buscar_primos
+from util.primos import buscar_primos
 
 primos = buscar_primos(10001)
 

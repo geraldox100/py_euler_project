@@ -14,7 +14,6 @@ eh_divisivel_pela_sequencia = True
 while(True):
     for elemento in sequencia:
         eh_divisivel_pela_sequencia = True
-        if elemento >= 19:
         if i % elemento != 0:
             eh_divisivel_pela_sequencia = False
             break;

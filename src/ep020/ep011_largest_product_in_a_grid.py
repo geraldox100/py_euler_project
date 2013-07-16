@@ -31,8 +31,8 @@ in the 20x20 grid?
 
 '''
 
-from rotacionador import rotacionar
-from diagonais_matriz import buscar_diagonais
+from util.rotacionador import rotacionar
+from util.diagonais_matriz import buscar_diagonais
 
 matriz = []
 
