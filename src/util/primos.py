@@ -41,7 +41,6 @@ def eh_divisivel_por_outro_primo(i,primos):
 def buscar_primos(quantidade):
     i =3
     primos = [2]
-    continuar_procurando = True
     while len(primos) < quantidade:
         if not eh_divisivel_por_dois(i):
             if not termina_em_cinco(i):
@@ -51,15 +50,38 @@ def buscar_primos(quantidade):
         i+=2
     return primos
 
+def busca_proximo(primo):
+    novo_primo = primo
+    continuar_procurando = True
+    while continuar_procurando:
+        novo_primo += 1
+        
+        if not eh_divisivel_por_dois(novo_primo):
+            if not termina_em_cinco(novo_primo):
+                if not eh_divisivel_por_tres(novo_primo):
+                    primos = buscar_primos(novo_primo)
+                    if not eh_divisivel_por_outro_primo(novo_primo,primos):
+                        return novo_primo
+        
+        
+        
+
 
 if __name__ == "__main__":
     import time
 
     inicio = time.time()
     
-    primos = buscar_primos(100000)
+    #primos = buscar_primos(100000)
     #for primo in primos:
-     #   print primo
+    #   print primo
+    
+    proximo = busca_proximo(53)
+    print proximo
+    proximo = busca_proximo(proximo)
+    print proximo
+    proximo = busca_proximo(proximo)
+    print proximo
         
     fim = time.time()
     
