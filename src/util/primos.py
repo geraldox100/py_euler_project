@@ -52,8 +52,7 @@ def buscar_primos(quantidade):
 
 def busca_proximo(primo):
     novo_primo = primo
-    continuar_procurando = True
-    while continuar_procurando:
+    while True:
         novo_primo += 1
         
         if not eh_divisivel_por_dois(novo_primo):

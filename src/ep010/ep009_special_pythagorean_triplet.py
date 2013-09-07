@@ -10,7 +10,9 @@ which a + b + c = 1000.
 Find the product abc.
 
 '''
+from time import time    
 
+start_time = time()
 a = 0
 b = 0
 c = 0
@@ -26,7 +28,7 @@ for n in range (1,100):
 
         if a+b+c == 1000:
             if ((a**2)+(b**2)==c**2):
-                print "009",a*b*c
+                print "009",a*b*c, "in", time() - start_time, "seconds"
                 breakk = True
                 break
     if breakk:

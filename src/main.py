@@ -20,3 +20,5 @@ if __name__ == '__main__':
     print "###@@@ 11 to 20 @@@###"
     import ep020.ep011_largest_product_in_a_grid
     import ep020.ep012_highly_divisible_triangular_number
+    import ep020.ep013_large_sum
+    import ep020.ep014_longest_collatz_sequence

@@ -10,13 +10,17 @@ values do not exceed four million, find the sum of the
 even-valued terms.
 '''
 #1, 2, 3, 5, 8, 13, 21, 34, 55, 89
-sum = 0
+from time import time    
+
+start_time = time()
+
+soma = 0
 y = 0
 x = 1
 while x <= 4000000:
     x = x + y
     y = x - y
     if x % 2 == 0 :
-        sum = sum + x
+        soma = soma + x
     
-print '002',sum
+print '002',soma, "in", time() - start_time, "seconds"

@@ -31,8 +31,11 @@ in the 20x20 grid?
 
 '''
 
-from util.rotacionador import rotacionar
+from util.rotacionador import girar
 from util.diagonais_matriz import buscar_diagonais
+from time import time    
+
+start_time = time()
 
 matriz = []
 
@@ -90,13 +93,13 @@ horizontal = maior_valor(matriz)
 
 diagonais = buscar_diagonais(matriz)
 
-matriz = rotacionar(matriz)
+matriz = girar(matriz)
 
 vertical = maior_valor(matriz)
 
-matriz = rotacionar(matriz, quantidade=2)
+matriz = girar(matriz, quantidade=2)
 
 diagonais.extend(buscar_diagonais(matriz))
 maior_diagonal = maior_valor(diagonais)
 
-print "011",max(horizontal,vertical,maior_diagonal)
+print "011",max(horizontal,vertical,maior_diagonal), "in", time() - start_time, "seconds"

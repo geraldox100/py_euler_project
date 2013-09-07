@@ -6,11 +6,15 @@ numbers is 9009 = 91 99.
 Find the largest palindrome made from the product of two 3-digit 
 numbers.
 '''
+
 def eh_palindromo(n):
     numero_normal = str(n)
-    numero_invertido = str(n)[::-1]
+    numero_invertido = numero_normal[::-1]
     return numero_normal == numero_invertido
         
+from time import time    
+
+start_time = time()
 
 palindromos = []    
 tamanho = 1000
@@ -21,4 +25,4 @@ for i in reversed(range(tamanho)):
         n = i * j
         if eh_palindromo(n):
             palindromos.append([i,j,n])
-print "004",max(palindromos, key=lambda x: x[2])[2]
+print "004",max(palindromos, key=lambda x: x[2])[2], "in", time() - start_time, "seconds"

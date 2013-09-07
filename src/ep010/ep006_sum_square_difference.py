@@ -9,6 +9,9 @@ Hence the difference between the sum of the squares of the first ten natural num
 
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 '''
+from time import time    
+
+start_time = time()
 
 range_ = 101
 
@@ -21,4 +24,4 @@ for i in range(1,range_):
     sums += i
 sums = sums ** 2
     
-print "006", sums - squares
+print "006", sums - squares, "in", time() - start_time, "seconds"

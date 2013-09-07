@@ -8,8 +8,10 @@ resposta = 7927
 
 '''
 
-from util.primos import buscar_primos
+from util._primos import Primos
+from time import time    
 
-primos = buscar_primos(10001)
+start_time = time()
 
-print "007", primos[10000]
+primo = Primos.buscar_primo_numero(10001)
+print "007", primo.numero(), "in", time() - start_time, "seconds"
